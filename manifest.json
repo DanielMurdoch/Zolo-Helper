@@ -1,0 +1,28 @@
+{
+  "name": "Zolo Helper",
+  "description": "A few features that zolo could really use.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "js/jquery/jquery.min.js",
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "https://www.zolo.ca/*",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.zolo.ca/*"
+      ],
+      "js": [
+        "js/jquery/jquery.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
